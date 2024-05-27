@@ -1,0 +1,8 @@
+<div>
+  @if (sessionId) {
+    <app-react-socket-table [sessionId]="sessionId"></app-react-socket-table>
+  }
+  @else {
+    <p>No session ID</p>
+  }
+</div>
