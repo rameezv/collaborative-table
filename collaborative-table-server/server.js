@@ -1,8 +1,12 @@
-import { WebSocket, WebSocketServer } from "ws";
+import { WebSocketServer } from "ws";
+import { readFileSync } from "fs";
 import { createServer } from "http";
 import { v4 as uuidv4 } from "uuid";
 
-const server = createServer();
+const server = createServer({
+	cert: readFileSync("/etc/letsencrypt/live/collaborative-table-server.rameez.me/cert.pem"),
+	key: readFileSync("/etc/letsencrypt/live/collaborative-table-server.rameez.me/privkey.pem"),
+});
 const webSocketServer = new WebSocketServer({ server });
 const port = 4210;
 server.listen(port, () => {

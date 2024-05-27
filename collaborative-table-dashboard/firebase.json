@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "rameezv-collaborative-table",
+    "public": "dist/collaborative-table-dashboard/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
