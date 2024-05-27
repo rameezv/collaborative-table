@@ -38,8 +38,6 @@ const ReactSocketTable = ({
   }, []);
 
   useEffect(() => {
-    lastJsonMessage && console.log(lastJsonMessage);
-
     if (lastJsonMessage?.type === "rows") {
       setRows(lastJsonMessage.rows);
     }
