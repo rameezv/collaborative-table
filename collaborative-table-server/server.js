@@ -1,6 +1,6 @@
 import { WebSocketServer } from "ws";
 import { readFileSync } from "fs";
-import { createServer } from "http";
+import { createServer } from "https";
 import { v4 as uuidv4 } from "uuid";
 
 const server = createServer({
