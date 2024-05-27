@@ -27,7 +27,7 @@ const ReactSocketTable = ({
   }: {
     lastJsonMessage: MessageFromServer;
     sendJsonMessage: (message: any) => void;
-  } = useWebSocket(`ws://localhost:4210/${sessionId}`, {
+  } = useWebSocket(`ws://157.230.202.57:4210/${sessionId}`, {
     share: true,
     onClose: () => sendJsonMessage({ type: "unregister" }),
   });
