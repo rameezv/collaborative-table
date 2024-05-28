@@ -86,7 +86,7 @@ const ReactSocketTable = ({
         <div className="my-4">
           Share this link to collaborate with others:
         </div>
-          <input className="w-full max-w-2xl bg-slate-800 p-2 rounded-full text-yellow-400 text-center" value={`https://collaborative-table.rameez.me/${sessionId}`} readOnly />
+          <input className="w-full max-w-2xl bg-slate-800 p-2 rounded-full text-yellow-400 text-center" value={`https://collaborative-table.rameez.me/table/${sessionId}`} readOnly />
       </div>
       <div className="text-center">
         <div className="mt-4">
