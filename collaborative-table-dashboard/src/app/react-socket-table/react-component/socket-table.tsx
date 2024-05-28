@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useWebSocket from "react-use-websocket";
-import { XCircleIcon, PlusCircleIcon } from "@heroicons/react/24/solid";
+import { XCircleIcon, PlusCircleIcon, MinusCircleIcon } from "@heroicons/react/24/solid";
 
 interface ReactSocketTableProps {
   sessionId: string;
@@ -83,16 +83,19 @@ const ReactSocketTable = ({
   return (
     <div>
       <div className="text-center">
-        React Socket Table - session ID: {sessionId}
+        <div className="my-4">
+          Share this link to collaborate with others:
+        </div>
+          <input className="w-full max-w-2xl bg-slate-800 p-2 rounded-full text-yellow-400 text-center" value={`https://collaborative-table.rameez.me/${sessionId}`} readOnly />
       </div>
       <div className="text-center">
-        <div className="mb-2">
+        <div className="mt-4">
           Columns:
         </div>
-        <div>
-          <button onClick={deleteColumn}>-</button>
-          <span className="mx-4">{tableSize}</span>
-          <button onClick={addColumn}>+</button>
+        <div className="flex justify-center">
+          <button onClick={deleteColumn}><MinusCircleIcon className="text-white h-4 w-4 hover:text-yellow-400" /></button>
+          <span className="mx-4 text-2xl">{tableSize}</span>
+          <button onClick={addColumn}><PlusCircleIcon className="text-white h-4 w-4 hover:text-yellow-400" /></button>
         </div>
       </div>
       <div className="m-auto my-4 min-w-80 overflow-x-scroll">
