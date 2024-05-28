@@ -30,6 +30,7 @@ const ReactSocketTable = ({
   } = useWebSocket(`wss://collaborative-table-server.rameez.me:4210/${sessionId}`, {
     share: true,
     onClose: () => sendJsonMessage({ type: "unregister" }),
+    shouldReconnect: () => true,
   });
 
   useEffect(() => {
