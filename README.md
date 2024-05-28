@@ -32,8 +32,9 @@ change the URL in `socket-table.tsx` to `ws://localhost:4210`.
 ## Future work
 
 As time was very limited, I stuck to the project requirements. However, this porject would be followed up with more features and code to handle the following:
-    - Error handling on the client side
-    - Better typescript integration between server and client
-    - Unit and e2e tests to increase stability and confidence
-    - Exporting table data to CSV and more
-    - Improved documentation and code style
+
+  - Error handling on the client side
+  - Better typescript integration between server and client
+  - Unit and e2e tests to increase stability and confidence
+  - Exporting table data to CSV and more
+  - Improved documentation and code style
