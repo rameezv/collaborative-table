@@ -7,7 +7,6 @@ import { v4 as uuidv4 } from 'uuid';
   standalone: true,
   imports: [],
   templateUrl: './create-session.component.html',
-  styleUrl: './create-session.component.css'
 })
 export class CreateSessionComponent {
   constructor(private router: Router) {}

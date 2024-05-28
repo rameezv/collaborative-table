@@ -8,7 +8,6 @@ import { ReactSocketTable } from './react-component/socket-table';
   standalone: true,
   imports: [],
   templateUrl: './react-socket-table.component.html',
-  styleUrl: './react-socket-table.component.css',
   encapsulation: ViewEncapsulation.None
 })
 export class ReactSocketTableComponent implements OnChanges, OnDestroy, AfterViewInit {
